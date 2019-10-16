@@ -1,0 +1,101 @@
+/* pages/heartbeat/heartbeat.wxss */
+.heartbeat,
+.heart-container {
+  height: 100%;
+  background-color: #252c41;
+  color: #fff;
+  position: relative;
+}
+
+#heart,
+#echo {
+position: absolute;
+width: 300px;
+height: 300px;
+margin: 30px auto;
+top: calc(50% - 200px);
+left: 0;
+right: 0;
+text-align: center;
+transform: scale(0.95);
+}
+
+#heart::before,
+#heart::after,
+#echo::before,
+#echo::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  width: 150px;
+  height: 240px;
+  background: #f1404b;
+  border-radius: 150px 150px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+#heart::after,
+#echo::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+#heart text {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  top: 35%;
+  left: 0;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+  font-size: 20px;
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(0.94);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes echo {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+#heart,
+#echo {
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1.74);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+#heart {
+  animation-name: heartbeat;
+}
+
+#echo {
+  animation-name: echo;
+}
+
+.down {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}

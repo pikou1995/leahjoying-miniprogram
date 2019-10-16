@@ -1,0 +1,10 @@
+<!--pages/heartbeat/heartbeat.wxml-->
+<view class="heartbeat">
+  <view class="heart-container animated {{animateClass}}">
+    <text id="echo"></text>
+    <text id="heart" bind:tap="easterEgg">
+      <text>在一起的{{time}}</text>
+    </text>
+  </view>
+  <text class="down">Love © {{year}} Pikou💕Ling</text>
+</view>
