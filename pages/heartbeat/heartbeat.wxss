@@ -1,23 +1,26 @@
 /* pages/heartbeat/heartbeat.wxss */
-.heartbeat,
-.heart-container {
+.heartbeat{
   height: 100%;
-  background-color: #252c41;
+  background: #252c41;
   color: #fff;
   position: relative;
 }
 
+.heart-container {
+  height: 100%;
+}
+
 #heart,
 #echo {
-position: absolute;
-width: 300px;
-height: 300px;
-margin: 30px auto;
-top: calc(50% - 200px);
-left: 0;
-right: 0;
-text-align: center;
-transform: scale(0.95);
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  top: calc(50% - 200px);
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: scale(0.95);
 }
 
 #heart::before,
@@ -95,7 +98,7 @@ transform: scale(0.95);
 
 .down {
   position: absolute;
-  bottom: 0;
+  bottom: 36rpx;
   text-align: center;
   width: 100%;
 }
