@@ -1,7 +1,5 @@
 // pages/heartbeat/heartbeat.js
-const ANIMATE_CLASSNAMES = require("../../utils/animateClassNames.js").filter(
-  c => c.indexOf("Out") === -1 && c !== "hinge"
-)
+const ANIMATE_CLASSNAMES = require("../../utils/animateClassNames.js")
 const randomIndex = require("../../utils/util.js").randomIndex
 
 Page({
@@ -63,5 +61,8 @@ Page({
       title: "你有一份快递请查收",
       imageUrl: "../../utils/avatar.png"
     }
+  },
+  onGotUserInfo(e) {
+    console.log(e)
   }
 })
