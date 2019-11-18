@@ -4,7 +4,7 @@ const randomIndex = require("../../utils/util.js").randomIndex
 
 Page({
   data: {
-    startTime: Date.parse("2019-05-01T19:00:00"),
+    startTime: Date.parse("01 May 2019 19:00:00 GMT+0800"),
     timeHandler: null,
     animateIndex: -1,
     animateClass: '',
